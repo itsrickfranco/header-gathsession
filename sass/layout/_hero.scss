@@ -1,0 +1,174 @@
+@use "../abstracts/variables" as v;
+@mixin button($bg-color: #2B2D38, $color: white) {
+  display: inline-block;
+  padding: 10px 35px;
+  color: $color;
+  font-size: 12px;
+  background-color: $bg-color;
+  text-decoration: none;
+  border-radius: 10px;
+  border-bottom-left-radius: 0;
+}
+
+.hero {
+    display: flex;
+    
+    gap: 35px;
+    height: 100%;
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: space-between;
+        width: 50%;
+
+        &__title {
+            margin-bottom: 60px;
+
+            h1 {
+                font-size: 60px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                color: v.$white;
+                margin-bottom: 24px;
+                font-family: v.$secondary-font;
+            }
+
+            p {
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 30px;
+                color: v.$white;
+                margin-bottom: 30px;
+            }
+
+            &__buttons {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                max-width: 60%;
+                gap: 10px;
+                margin-bottom: 30px;
+
+                a.start {
+                    @include button (v.$pink , v.$white);
+                }
+
+                a.more {
+                    display: inline-flex;
+                    padding: 10px 35px;
+                    color: v.$white;
+                    font-size: 12px;
+                    font-weight: bold;
+                    flex-direction: row;
+                    align-items: center;
+
+                }
+            }
+
+        
+
+        }
+
+        &__services {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            &__item {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+
+                img {
+                    background: rgba(255, 255, 255, 0.25);
+                    border-radius: 10px;
+                    padding: 10px;
+                }
+
+                h3 {
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    color: #FFF;
+                }
+                
+            }
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        align-content: space-between;
+        justify-content: space-between;
+        gap: 20px;
+        width: 50%;
+        background-image: url('../../img/circles-bg.svg');
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: contain;
+
+        &__a1 {
+            grid-column: 1 / span 1;
+            grid-row: 1 / span 4;
+            background-color: #6E1FED;
+            border-radius: 50px;
+            background-image: url('../../img/modela1.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        &__a2 {
+            grid-column: 1 / span 1;
+            grid-row: 5 / span 2;
+            background-color: #DB2A6B;
+            border-radius: 35%;
+            background-image: url('../../img/modela2.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        &__b1 {
+            grid-column: 2 / span 1;
+            grid-row: 1 / span 2;
+            background-color: #60D3D9;
+            border-radius: 35%;
+            background-image: url('../../img/modelb1.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        &__b2 {
+            grid-column: 2 / span 1;
+            grid-row: 3 / span 4;
+            background-color: #FF7E29;
+            border-radius: 50px;
+            background-image: url('../../img/modelb2.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        &__c1 {
+            grid-column: 3 / span 1;
+            grid-row: 2 / span 4;            
+            background-color: #F4B840;
+            border-radius: 50px;
+            background-image: url('../../img/modelc1.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+        }
+    }
+}

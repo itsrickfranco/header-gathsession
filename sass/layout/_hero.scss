@@ -55,6 +55,11 @@
 
                 a.start {
                     @include button (v.$pink , v.$white);
+
+                    &:hover {
+                        background-color: v.$white;
+                        color: v.$pink;
+                    }
                 }
 
                 a.more {
@@ -65,6 +70,10 @@
                     font-weight: bold;
                     flex-direction: row;
                     align-items: center;
+
+                    &:hover {
+                        color: v.$pink;
+                    }
 
                 }
             }
@@ -96,6 +105,10 @@
                     font-weight: 500;
                     line-height: normal;
                     color: #FFF;
+
+                    &:hover {
+                        color: v.$pink;
+                    }
                 }
                 
             }
